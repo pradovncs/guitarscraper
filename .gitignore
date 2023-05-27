@@ -1,0 +1,38 @@
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+
+# IDEs and editors
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Testing
+.coverage
+.tox/
+htmlcov/
+
+__pycache__
+
+# Miscellaneous
+*.pyc
+*.bak
+*.swp
+.DS_Store
+Thumbs.db
+
+# Logs
