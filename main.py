@@ -25,9 +25,9 @@ def main():
     megasom_products = []
     for prod_url in megasom_product_urls:
         tmp = parse_products(url=prod_url,
-                                    title_selector="h1",
-                                    price_selector=".preco-avista.precoAvista",
-                                    img_selector=".zoom img")
+                             title_selector="h1",
+                             price_selector=".preco-avista.precoAvista",
+                             img_selector=".zoom img")
         megasom_products.append(tmp)
     save_csv(results=megasom_products, store='megasom')
     
