@@ -11,6 +11,17 @@ s = HTMLSession()
 s.headers = headers
 
 def get_product_links(page:str, base_url:str, products_selector:str):
+    """
+    Retrieves the links of products from a webpage.
+
+    Args:
+        page (str): The page number or URL of the webpage.
+        base_url (str): The base URL of the webpage.
+        products_selector (str): The CSS selector to locate the product elements.
+
+    Returns:
+        list: A list of product links.
+    """
     links = []
     while True:
         r = s.get(f"{base_url}{page}")
@@ -23,6 +34,18 @@ def get_product_links(page:str, base_url:str, products_selector:str):
     return links
 
 def parse_products(url: str, title_selector: str, price_selector: str, img_selector: str):
+    """
+    Parses the information of a product from a given URL.
+
+    Args:
+        url (str): The URL of the product page.
+        title_selector (str): The CSS selector to locate the title element.
+        price_selector (str): The CSS selector to locate the price element.
+        img_selector (str): The CSS selector to locate the image element.
+
+    Returns:
+        dict: A dictionary containing the parsed product information.
+    """
     r = s.get(url)
     try:
         title_element = r.html.find(title_selector, first=True)
