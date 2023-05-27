@@ -1,6 +1,6 @@
 import csv
 
-def save_csv(results: dict, store: str):
+def save_csv(results: list[dict], store: str):
     keys = results[0].keys()
 
     with open(f'{store}_products.csv', 'w', newline='') as f:
